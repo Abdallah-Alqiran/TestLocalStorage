@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <form action="/page.html">
+
+      <label for="iText">Enter your name : </label>
+      <input type="text" id="iText" >
+      <input type="submit" onclick="SaveData()">
+
+    </form>
+
+      <div>
+          <button onclick="RemoveData()">remove</button>
+          <button onclick="DeleteData()">clear</button>
+          
+      </div>
+
+
+
+    <script>
+
+        function SaveData () {
+            var inputData = document.getElementById("iText").value;
+            localStorage.setItem('User Name',inputData);
+        }
+
+        function RemoveData () {
+            localStorage.removeItem('User Name');
+        }
+
+        function DeleteData () {
+            localStorage.clear();
+        }
+
+    </script>
+
+
+  </body>
+</html>
